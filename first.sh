@@ -14,6 +14,7 @@ else
 fi
 
 flush() {
+	#Echoing the process
 	testo=$1
 	echo $testo
 	
@@ -34,7 +35,6 @@ flush() {
 	do
 		rm $file
 	done
-	echo $testo2
 }
 
 animate() {
