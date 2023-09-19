@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#This is testing
 pdir=$(pwd)
 echo "This is $pdir"
 perms=$(stat -L -c "%a %G %U" first.sh)  
