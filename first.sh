@@ -14,8 +14,7 @@ fi
 flush() {
 	testo=$1
 	echo $testo
-	cp firstlog.log newdir/
-
+	
 	read "How many files should I flush? " times
 	cnt=0
 	while [ $cnt -le times ]
