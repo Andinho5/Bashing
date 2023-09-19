@@ -2,13 +2,15 @@
 
 #This is testing
 pdir=$(pwd)
-echo "This is $pdir"
+echo "This is: $pdir"
 perms=$(stat -L -c "%a %G %U" first.sh)  
 echo "Permissions: $perms"
 
 if [ ! -d newdir ]
 then
 	mkdir newdir
+else 
+	echo "It is already there"
 fi
 
 flush() {
