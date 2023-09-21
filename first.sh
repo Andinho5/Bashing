@@ -2,9 +2,12 @@
 
 #This is testing
 pdir=$(pwd)
-echo "This is: $pdir"
+base="newdir/*.log"
+echo "This is: $(basename $base) in $pdir"
 perms=$(stat -L -c "%a %G %U" first.sh)  
 echo "Permissions: $perms"
+
+. second.sh
 
 if [ ! -d newdir ]
 then
@@ -59,7 +62,7 @@ read -p "Proceed with deletion? (y/n): " pro
 if [ $pro == "y" ]
 then
 	del
-elif [ $pro == "n" ] 
+elif [ $pro == "n" ]
 then
 	echo "[$(date)]: Deletion aborted. Ceasing activity." >> firstlog.log
 	exit 2
